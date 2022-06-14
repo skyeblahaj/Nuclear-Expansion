@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "": {
+            "model": "nuclearexpansion:block/block_plutonium"
+        }
+    }
+}

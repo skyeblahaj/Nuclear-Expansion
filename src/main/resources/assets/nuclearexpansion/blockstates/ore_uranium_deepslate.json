@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "": {
+            "model": "nuclearexpansion:block/ore_uranium_deepslate"
+        }
+    }
+}

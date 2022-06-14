@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "zxz",
+        "xyx",
+        "zxz"
+    ],
+    "key":
+    {
+        "x": {
+            "item" : "nuclearexpansion:carbon_compound"
+        },
+        "y": {
+            "item" : "nuclearexpansion:sheet_teflon"
+        },
+        "z": {
+            "item" : "thermal:block_lead"
+        }
+    },
+    "result":
+    {
+        "item": "nuclearexpansion:reactor_casing",
+        "count" : 2
+    }
+}

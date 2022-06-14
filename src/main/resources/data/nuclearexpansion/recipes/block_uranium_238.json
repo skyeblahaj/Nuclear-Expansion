@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xxx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "nuclearexpansion:ingot_uranium_238"
+        }
+    },
+    "result":
+    {
+        "item": "nuclearexpansion:block_uranium_238"
+    }
+}

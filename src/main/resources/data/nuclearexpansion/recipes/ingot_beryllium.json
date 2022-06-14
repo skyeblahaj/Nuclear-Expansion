@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item" : "nuclearexpansion:block_beryllium"
+        }
+    ],
+    "result":
+    {
+        "item": "nuclearexpansion:ingot_beryllium",
+        "count": 9
+    }
+}

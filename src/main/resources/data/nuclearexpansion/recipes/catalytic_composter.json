@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "zaz",
+        "xdb",
+        "cyc"
+    ],
+    "key":
+    {
+        "x":{
+            "item" : "minecraft:red_mushroom"
+        },
+        "y":{
+            "item":"minecraft:piston"
+        },
+        "z":{
+            "item":"minecraft:cobblestone"
+        },
+        "a":{
+            "item":"nuclearexpansion:ingot_beryllium"
+        },
+        "b":{
+            "item":"minecraft:brown_mushroom"
+        },
+        "c":{
+            "item":"minecraft:obsidian"
+        },
+        "d":{
+            "item":"minecraft:slime_ball"
+        }
+    },
+    "result":
+    {
+        "item": "nuclearexpansion:catalytic_composter"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "variants":{
+        "facing=north": {
+            "model": "nuclearexpansion:block/particle_catcher"
+        },
+        "facing=east" : {
+            "model": "nuclearexpansion:block/particle_catcher",
+            "y" : 90
+        },
+        "facing=south" : {
+            "model": "nuclearexpansion:block/particle_catcher",
+            "y" : 180
+        },
+        "facing=west" : {
+            "model": "nuclearexpansion:block/particle_catcher",
+            "y" : 270
+        }
+    }
+}

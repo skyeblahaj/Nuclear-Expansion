@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "zyy",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item" : "thermal:lead_block"
+        },
+        "y":{
+            "item" : "minecraft:white_dye"
+        },
+        "z":{
+            "item":"minecraft:quartz"
+        }
+    },
+    "result":
+    {
+        "item": "nuclearexpansion:particle_catcher"
+    }
+}

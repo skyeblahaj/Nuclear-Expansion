@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end" : "nuclearexpansion:blocks/teflon_sheet_top",
+        "side": "nuclearexpansion:blocks/teflon_sheet"
+    }
+}

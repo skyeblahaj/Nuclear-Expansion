@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item" : "nuclearexpansion:block_uranium_235"
+        }
+    ],
+    "result":
+    {
+        "item": "nuclearexpansion:ingot_uranium_235",
+        "count": 9
+    }
+}

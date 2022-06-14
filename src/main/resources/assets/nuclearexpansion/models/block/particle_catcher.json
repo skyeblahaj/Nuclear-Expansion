@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "nuclearexpansion:blocks/particle_catcher_top",
+        "side": "nuclearexpansion:blocks/particle_catcher_side",
+        "front": "nuclearexpansion:blocks/particle_catcher_side"
+    }
+}

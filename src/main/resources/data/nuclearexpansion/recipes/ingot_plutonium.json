@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item" : "nuclearexpansion:block_plutonium"
+        }
+    ],
+    "result":
+    {
+        "item": "nuclearexpansion:ingot_plutonium",
+        "count": 9
+    }
+}

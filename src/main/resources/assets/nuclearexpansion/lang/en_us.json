@@ -1,0 +1,28 @@
+{
+    "item.nuclearexpansion.ingot_uranium_235" : "Uranium-235 Ingot",
+    "item.nuclearexpansion.ingot_uranium_238" : "Uranium-238 Ingot",
+    "item.nuclearexpansion.ingot_plutonium" : "§ePlutonium Ingot",
+    "item.nuclearexpansion.ingot_beryllium" : "Beryllium Ingot",
+    "item.nuclearexpansion.shard_beryllium" : "Beryllium Shard",
+    "item.nuclearexpansion.shard_fluorite" : "Fluorite Shard",
+    "item.nuclearexpansion.ethylene_mulch" : "Ethylene Mulch",
+    "item.nuclearexpansion.plate_teflon" : "Teflon Plate",
+    "item.nuclearexpansion.carbon_compound" : "Carbon Compound",
+    "item.nuclearexpansion.alpha_particles" : "Alpha Particles",
+
+    "block.nuclearexpansion.sheet_teflon" : "Teflon Sheet Block",
+    "block.nuclearexpansion.block_uranium_235" : "Block of Uranium-235",
+    "block.nuclearexpansion.block_uranium_238" : "Block of Uranium-238",
+    "block.nuclearexpansion.block_plutonium" : "§eBlock of Plutonium",
+    "block.nuclearexpansion.block_beryllium" : "Block of Beryllium",
+    "block.nuclearexpansion.ore_beryllium" : "Beryllium Ore",
+    "block.nuclearexpansion.ore_beryllium_deepslate" : "Deepslate Beryllium Ore",
+    "block.nuclearexpansion.ore_uranium" : "Uranium Ore",
+    "block.nuclearexpansion.ore_uranium_deepslate" : "Deepslate Uranium Ore",
+    "block.nuclearexpansion.ore_thorium" : "Thorium Ore",
+    "block.nuclearexpansion.ore_thorium_deepslate" : "Deepslate Thorium Ore",
+
+    "block.nuclearexpansion.particle_catcher" : "Particle Catcher",
+
+    "itemGroup.Nuclear Expansion" : "Nuclear Expansion"
+}

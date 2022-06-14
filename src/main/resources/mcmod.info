@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nuclearexpansion",
+  "name": "Nuclear Expansion",
+  "description": "Realistic Nuclear Chemistry",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SkyeBlahaj"],
+  "credits": "skyeblahaj",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

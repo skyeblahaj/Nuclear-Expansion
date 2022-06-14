@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "yzy",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item" : "minecraft:coal"
+        },
+        "y":{
+            "item" : "nuclearexpansion:ethylene_mulch"
+        },
+        "z":{
+            "item" : "minecraft:diamond"
+        }
+    },
+    "result":
+    {
+        "item": "nuclearexpansion:carbon_compound"
+    }
+}
