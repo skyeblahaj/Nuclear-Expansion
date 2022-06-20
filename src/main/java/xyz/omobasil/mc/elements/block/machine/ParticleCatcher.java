@@ -76,6 +76,7 @@ public class ParticleCatcher extends BaseEntityBlock {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (blockEntity instanceof ParticleCatcherEntity) {
                 ((ParticleCatcherEntity) blockEntity).drops();
+                //((ParticleCatcherEntity) blockEntity).getEnergyBase().setEnergy(0);
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
@@ -92,7 +93,6 @@ public class ParticleCatcher extends BaseEntityBlock {
                 throw new IllegalStateException("Container provider is missing!");
             }
         }
-
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 

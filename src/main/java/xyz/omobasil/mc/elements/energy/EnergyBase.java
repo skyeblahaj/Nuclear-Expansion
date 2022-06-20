@@ -41,7 +41,7 @@ public class EnergyBase extends EnergyStorage {
 	}
 	
 	public void setEnergy(int energy) {
-		this.energy = Functions.clampInt(0, energy, this.capacity);
+		this.energy = (int) Functions.clamp(this.capacity, 0, energy);
 	}
 	
 	

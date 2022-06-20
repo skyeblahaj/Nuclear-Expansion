@@ -45,15 +45,15 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 
 	private LazyOptional<IItemHandler> lazyHandler = LazyOptional.empty();
 	
-	private final EnergyBase energyStorage;
+	private EnergyBase energyStorage;
 	private LazyOptional<EnergyBase> energy;
 	private int capacity = 6000; //rf/fe
-	private int maxRecieve = 100;
-	private int energyPerTick = 20;
+	private int maxRecieve = 200; //input a tick
+	private int energyPerTick = 20; //power consumption
 
 	public ParticleCatcherEntity(BlockPos xyz, BlockState state) {
 		super(BlockEntityInit.PARTICLE_CATCHER_ENTITY.get(), xyz, state);
-		this.energyStorage = createEnergyStorage();
+		this.energyStorage = new EnergyBase(this, this.capacity, this.maxRecieve, 0);
 		this.energy = LazyOptional.of(() -> this.energyStorage);
 	}
 	
@@ -67,7 +67,8 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 		case 4: return this.capacity;
 		case 5: return this.maxRecieve;
 		case 6: return this.energyPerTick;
-		default: return 0;
+		case 7: return energyStorage.getEnergyStored();
+		default: return -1;
 		}
 	}
 	
@@ -81,9 +82,15 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 		case 4: this.capacity = newValue; break;
 		case 5: this.maxRecieve = newValue; break;
 		case 6: this.energyPerTick = newValue; break;
+		case 7: this.energyStorage.setEnergy(newValue); break;
 		}
 	}
-
+	
+	/*@Override
+	public Packet<ClientGamePacketListener> getUpdatePacket() {
+		return ClientboundBlockEntityDataPacket.create(this);
+	}*/
+	
 	@Override
 	public Component getDisplayName() {
 		return new TextComponent("Particle Catcher");
@@ -93,7 +100,7 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 	public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
 		if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return this.lazyHandler.cast();
-		if (cap == CapabilityEnergy.ENERGY) this.energy.cast();
+		if (cap == CapabilityEnergy.ENERGY) return this.energy.cast();
 		return super.getCapability(cap, side);
 	}
 
@@ -106,6 +113,7 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 	public void onLoad() {
 		super.onLoad();
 		lazyHandler = LazyOptional.of(() -> itemStackHandler);
+		energy = LazyOptional.of(() -> energyStorage);
 	}
 
 	@Override
@@ -118,12 +126,8 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 	@Override
 	protected void saveAdditional(CompoundTag tag) {
 		tag.put("inventory", itemStackHandler.serializeNBT());
-		tag.putInt("energy", getEnergy());
+		tag.putInt("energy", energyStorage.getEnergyStored());
 		super.saveAdditional(tag);
-	}
-
-	public int getEnergy() {
-		return energyStorage.getEnergyStored();
 	}
 	
 	@Override
@@ -142,7 +146,7 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 	}
 
 	public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ParticleCatcherEntity blockEntity) {
-		if (hasRecipe(blockEntity) && hasNotReachedStackLimit(blockEntity) && hasEnoughEnergy(blockEntity)) {
+		if (hasRecipe(blockEntity) && hasNotReachedStackLimit(blockEntity) && blockEntity.energyStorage.getEnergyStored() >= blockEntity.energyPerTick) {
 			if (blockEntity.currentDecayTime >= blockEntity.maxDecayTime) {
 				//STARTS PACKAGING
 				if (blockEntity.currentPackagingTime >= blockEntity.maxPackagingTime) {
@@ -182,17 +186,9 @@ public class ParticleCatcherEntity extends BlockEntity implements MenuProvider, 
 		return entity.itemStackHandler.getStackInSlot(2).getCount() < entity.itemStackHandler.getStackInSlot(2).getMaxStackSize();
 	}
 	
-	private static boolean hasEnoughEnergy(ParticleCatcherEntity entity) {
-		return entity.energyStorage.getEnergyStored() >= entity.energyPerTick;
-	}
-	
 	@Override
 	public boolean isProcessing() {
 		return this.currentDecayTime > 0 || this.currentPackagingTime > 0;
-	}
-	
-	private EnergyBase createEnergyStorage() {
-		return new EnergyBase(this, this.capacity, this.maxRecieve, 0);
 	}
 	
 }

@@ -28,16 +28,16 @@ public class ParticleCatcherScreen extends AbstractContainerScreen<ParticleCatch
 		int y = topPos;
 		
 		this.blit(p_97787_, x, y, 0, 0, imageWidth, imageHeight);
-		
-		if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.14f) {
-			int powerBar = 0, raise = 0;
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.14f) {powerBar = 40; raise = 10;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.29f) {powerBar = 34; raise = 16;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.43f) {powerBar = 28; raise = 22;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.57f) {powerBar = 22; raise = 28;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.71f) {powerBar = 16; raise = 34;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.86f) {powerBar = 10; raise = 40;}
-			if (this.menu.getBlockEntity().getEnergy() >= this.menu.getBlockEntity().get(4) * 0.95f) {powerBar = 0; raise = 50;}
+		//System.out.println(this.menu.getBlockEntity().get(7));
+		if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.14f) {
+			//System.out.println("drawing...");
+			int powerBar = 40, raise = 10;
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.29f) {powerBar = 34; raise = 16;}
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.43f) {powerBar = 28; raise = 22;}
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.57f) {powerBar = 22; raise = 28;}
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.71f) {powerBar = 16; raise = 34;}
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.86f) {powerBar = 10; raise = 40;}
+			if (this.menu.getBlockEntity().get(7) >= this.menu.getBlockEntity().get(4) * 0.95f) {powerBar = 0; raise = 50;}
 			this.blit(p_97787_, x + 7, y + 17, 176, powerBar, 15, raise);
 		}
 		
