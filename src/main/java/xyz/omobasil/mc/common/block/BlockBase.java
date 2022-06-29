@@ -1,4 +1,4 @@
-package xyz.omobasil.mc.elements.block;
+package xyz.omobasil.mc.common.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;

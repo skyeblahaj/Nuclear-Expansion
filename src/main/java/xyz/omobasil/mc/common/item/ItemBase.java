@@ -1,4 +1,4 @@
-package xyz.omobasil.mc.elements.item;
+package xyz.omobasil.mc.common.item;
 
 import net.minecraft.world.item.Item;
 import xyz.omobasil.mc.NuclearExpansion;

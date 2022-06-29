@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import xyz.omobasil.mc.client.gui.ParticleCatcherScreen;
-import xyz.omobasil.mc.elements.tab.NucExpTab;
+import xyz.omobasil.mc.common.tab.NucExpTab;
 import xyz.omobasil.mc.initialization.BlockEntityInit;
 import xyz.omobasil.mc.initialization.BlockInit;
 import xyz.omobasil.mc.initialization.ItemInit;

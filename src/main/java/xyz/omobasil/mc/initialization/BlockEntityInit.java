@@ -5,7 +5,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xyz.omobasil.mc.NuclearExpansion;
-import xyz.omobasil.mc.elements.block.blockentity.ParticleCatcherEntity;
+import xyz.omobasil.mc.common.block.blockentity.ParticleCatcherEntity;
 
 public class BlockEntityInit {
 

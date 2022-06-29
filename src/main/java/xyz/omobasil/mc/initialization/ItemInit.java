@@ -7,7 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xyz.omobasil.mc.NuclearExpansion;
-import xyz.omobasil.mc.elements.item.ItemBase;
+import xyz.omobasil.mc.common.item.ItemBase;
 
 public class ItemInit {
 

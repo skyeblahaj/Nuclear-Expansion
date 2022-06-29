@@ -1,4 +1,4 @@
-package xyz.omobasil.mc.elements.world.gen;
+package xyz.omobasil.mc.common.world.gen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import xyz.omobasil.mc.elements.world.gen.placed.OrePlaced;
+import xyz.omobasil.mc.common.world.gen.placed.OrePlaced;
 import xyz.omobasil.mc.initialization.BlockInit;
 
 public class OreGen {

@@ -1,4 +1,4 @@
-package xyz.omobasil.mc.elements.world.gen.placed;
+package xyz.omobasil.mc.common.world.gen.placed;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
-import xyz.omobasil.mc.elements.world.gen.OreGen;
+import xyz.omobasil.mc.common.world.gen.OreGen;
 
 public class OrePlaced {
 

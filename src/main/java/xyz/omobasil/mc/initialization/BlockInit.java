@@ -10,9 +10,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xyz.omobasil.mc.NuclearExpansion;
-import xyz.omobasil.mc.elements.block.BlockBase;
-import xyz.omobasil.mc.elements.block.BlockOre;
-import xyz.omobasil.mc.elements.block.machine.ParticleCatcher;
+import xyz.omobasil.mc.common.block.BlockBase;
+import xyz.omobasil.mc.common.block.BlockOre;
+import xyz.omobasil.mc.common.block.machine.ParticleCatcher;
 
 public class BlockInit {
 

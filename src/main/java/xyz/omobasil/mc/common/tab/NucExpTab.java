@@ -1,4 +1,4 @@
-package xyz.omobasil.mc.elements.tab;
+package xyz.omobasil.mc.common.tab;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
